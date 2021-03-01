@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/Project/CLionProjects/CS110/HW1/main.c
+/media/caohch1/MyPassport/Courses/Computer Architecture/CS110/HW1/M64.c
 stdio.h
 -
 stdint.h

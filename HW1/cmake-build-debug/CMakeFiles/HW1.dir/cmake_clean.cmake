@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/HW1.dir/M32.c.o"
   "CMakeFiles/HW1.dir/M64.c.o"
   "HW1"
   "HW1.pdb"

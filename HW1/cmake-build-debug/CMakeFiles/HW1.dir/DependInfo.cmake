@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/d/Project/CLionProjects/CS110/HW1/M32.c" "/mnt/d/Project/CLionProjects/CS110/HW1/cmake-build-debug/CMakeFiles/HW1.dir/M32.c.o"
-  "/mnt/d/Project/CLionProjects/CS110/HW1/M64.c" "/mnt/d/Project/CLionProjects/CS110/HW1/cmake-build-debug/CMakeFiles/HW1.dir/M64.c.o"
+  "/media/caohch1/MyPassport/Courses/Computer Architecture/CS110/HW1/M64.c" "/media/caohch1/MyPassport/Courses/Computer Architecture/CS110/HW1/cmake-build-debug/CMakeFiles/HW1.dir/M64.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
