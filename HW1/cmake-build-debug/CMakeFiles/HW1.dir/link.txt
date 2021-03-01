@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/HW1.dir/M64.c.o CMakeFiles/HW1.dir/M32.c.o  -o HW1 
