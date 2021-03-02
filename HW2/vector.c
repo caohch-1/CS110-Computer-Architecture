@@ -120,18 +120,32 @@ void vector_set(vector_t *v, size_t loc, int value) {
 
     /* YOUR SOLUTION HERE */
     if (loc >= v->size) {
-        int *new_data = (int *)malloc((loc + 1) * sizeof(int));
+        /*Use a naive malloc() way here, realloc() will also work with some modifications*/
+        int *new_data = (int *)malloc((loc + 1) * sizeof(int)); /*Create a new int array*/
+        /*Check if malloc() succeed*/
+        if (new_data == NULL) {
+            free(v->data);
+            free(v);
+            allocation_failed();
+        }
+        /*copy original data into new array*/
         int i;
         for (i = 0; i < v->size; i++) {
             new_data[i] = v->data[i];
         }
+        /*Fill empty part of new array with 0*/
         for (; i < loc + 1; i++) {
             new_data[i] = 0;
         }
+        /*Set loc_th be value*/
         new_data[loc] = value;
+        /*Free old data memory*/
         free(v->data);
+        /*Assign new properties to original vector_t*/
         v->data = new_data;
+        v->size = loc + 1;
     } else {
+        /*If capacity is enough*/
         v->data[loc] = value;
     }
 }
