@@ -69,10 +69,10 @@ vector_t *vector_new() {
        Since retval->data should be able to dynamically grow,
        what do you need to do? */
     retval->size = 1;/* YOUR CODE HERE */
-    retval->data = (int *)malloc(sizeof(int))/* YOUR CODE HERE */
+    retval->data = (int *)malloc(sizeof(int));/* YOUR CODE HERE */
 
     /* Check the data attribute of our vector to make sure we got memory */
-    if (retval.data == NULL/* YOUR CODE HERE */) {
+    if (retval->data == NULL/* YOUR CODE HERE */) {
         free(retval);				//Why is this line necessary? data malloc failure but malloc of struct vector is successful
         allocation_failed();
     }
@@ -96,8 +96,8 @@ int vector_get(vector_t *v, size_t loc) {
     /* If the requested location is higher than we have allocated, return 0.
      * Otherwise, return what is in the passed location.
      */
-    if (loc < v->size - 1/* YOUR CODE HERE */) {
-        return v[loc];/* YOUR CODE HERE */
+    if (loc <= v->size - 1/* YOUR CODE HERE */) {
+        return v->data[loc];/* YOUR CODE HERE */
     } else {
         return 0;
     }
@@ -120,7 +120,18 @@ void vector_set(vector_t *v, size_t loc, int value) {
 
     /* YOUR SOLUTION HERE */
     if (loc >= v->size) {
-        int* temp = v->data;
-        
+        int *new_data = (int *)malloc((loc + 1) * sizeof(int));
+        int i;
+        for (i = 0; i < v->size; i++) {
+            new_data[i] = v->data[i];
+        }
+        for (; i < loc + 1; i++) {
+            new_data[i] = 0;
+        }
+        new_data[loc] = value;
+        free(v->data);
+        v->data = new_data;
+    } else {
+        v->data[loc] = value;
     }
 }
