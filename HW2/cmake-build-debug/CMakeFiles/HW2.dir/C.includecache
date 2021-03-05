@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.h
+stdbool.h
+-
+stddef.h
+-
+
+/mnt/d/Project/CLionProjects/CS110/HW2/main.c
+stdio.h
+-
+doubll2d.h
+/mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.h
+stdlib.h
+-
+

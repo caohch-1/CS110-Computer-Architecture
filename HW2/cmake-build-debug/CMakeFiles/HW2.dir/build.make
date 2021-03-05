@@ -60,28 +60,28 @@ include CMakeFiles/HW2.dir/flags.make
 CMakeFiles/HW2.dir/main.c.o: CMakeFiles/HW2.dir/flags.make
 CMakeFiles/HW2.dir/main.c.o: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Project/CLionProjects/CS110/HW2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/HW2.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HW2.dir/main.c.o   -c /mnt/d/Project/CLionProjects/CS110/HW2/main.c
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HW2.dir/main.c.o   -c /mnt/d/Project/CLionProjects/CS110/HW2/main.c
 
 CMakeFiles/HW2.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HW2.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/Project/CLionProjects/CS110/HW2/main.c > CMakeFiles/HW2.dir/main.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/Project/CLionProjects/CS110/HW2/main.c > CMakeFiles/HW2.dir/main.c.i
 
 CMakeFiles/HW2.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HW2.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/Project/CLionProjects/CS110/HW2/main.c -o CMakeFiles/HW2.dir/main.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/Project/CLionProjects/CS110/HW2/main.c -o CMakeFiles/HW2.dir/main.c.s
 
 CMakeFiles/HW2.dir/doubll2d.c.o: CMakeFiles/HW2.dir/flags.make
 CMakeFiles/HW2.dir/doubll2d.c.o: ../doubll2d.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Project/CLionProjects/CS110/HW2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/HW2.dir/doubll2d.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HW2.dir/doubll2d.c.o   -c /mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.c
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HW2.dir/doubll2d.c.o   -c /mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.c
 
 CMakeFiles/HW2.dir/doubll2d.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HW2.dir/doubll2d.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.c > CMakeFiles/HW2.dir/doubll2d.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.c > CMakeFiles/HW2.dir/doubll2d.c.i
 
 CMakeFiles/HW2.dir/doubll2d.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HW2.dir/doubll2d.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.c -o CMakeFiles/HW2.dir/doubll2d.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.c -o CMakeFiles/HW2.dir/doubll2d.c.s
 
 # Object files for target HW2
 HW2_OBJECTS = \
