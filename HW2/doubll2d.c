@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-int find_cursor(doubll2d *list, doubll2d_elem *cursor) {
+int static find_cursor(doubll2d *list, doubll2d_elem *cursor) {
     /*temp used to travel whole 2d-list*/
     doubll2d_elem *temp = list->head;
     /* 2 num used to check if temp should go down
