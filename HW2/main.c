@@ -2,6 +2,14 @@
 #include "doubll2d.h"
 #include <stdlib.h>
 
+bool less(const void *a, const void *b) {
+    if (*((int *)a) < *((int *)b)) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 int main() {
     doubll2d_elem *test_return;
     doubll2d list;
@@ -56,9 +64,11 @@ int main() {
 
     printf("%d-%d-%d\n", *((int *) list.head->data), *((int *) list.head->down->data),
            *((int *) list.head->down->down->data));
-    printf("%d\n", *((int *) test_return->data));
 
-    doubll2d_purge(&list);
+    test_return = doubll2d_find_min(&list, less);
+    printf("min: %d\n", *((int *) test_return->data));
+
+
 
 
     return 0;
