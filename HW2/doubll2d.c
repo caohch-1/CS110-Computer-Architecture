@@ -10,7 +10,7 @@ int find_cursor(doubll2d *list, doubll2d_elem *cursor) {
      * In other word, if all elements in current row has been visited*/
     unsigned int row_num, col_num;
     /*exist_cursor is a flag to check if cursor has been found*/
-    int exist_cursor;
+    int exist_cursor = 0;
 
     for (row_num = 1; row_num <= list->dim_row; ++row_num) {
         /* temp go right when in odd row,
@@ -176,7 +176,9 @@ doubll2d_elem *doubll2d_insert_row(doubll2d *list, doubll2d_elem *cursor,
 
         /*If new_row is bottom row, assign tail to last node in new_row*/
         if (new_row[0]->down == NULL) list->tail = new_row[list->dim_col - 1];
+        free(new_row);
     }
+
 
     list->dim_row++;
     return cursor->down;
@@ -285,6 +287,8 @@ doubll2d_elem *doubll2d_insert_col(doubll2d *list, doubll2d_elem *cursor,
 
         /*If new_col is rightest row, assign tail to last node in new_col*/
         if (new_col[0]->right == NULL) list->tail = new_col[list->dim_row - 1];
+
+        free(new_col);
     }
 
     list->dim_col++;

@@ -68,6 +68,17 @@ int main() {
     test_return = doubll2d_find_min(&list, less);
     printf("min: %d\n", *((int *) test_return->data));
 
+    doubll2d_purge(&list);
+    free(data[0]);
+    free(data);
+    free(size);
+    free(data2[0]);
+    free(data2[1]);
+    free(data2[2]);
+    free(data2[3]);
+    free(data2);
+    free(size2);
+
 
 
 
