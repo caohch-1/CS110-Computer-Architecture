@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "doubll2d.h"
 #include <stdlib.h>
+#include <time.h>
 
 bool less(const void *a, const void *b) {
     if (*((int *)a) < *((int *)b)) {
@@ -10,75 +11,68 @@ bool less(const void *a, const void *b) {
     }
 }
 
+void travel(doubll2d *list) {
+    doubll2d_elem *temp = list->head;
+    unsigned int row_num, col_num;
+
+    for (row_num = 1; row_num <= list->dim_row; ++row_num) {
+        for (col_num = 1; col_num <= list->dim_col; ++col_num) {
+            printf("%d ", *((int *)temp->data));
+
+            if (col_num == list->dim_col && row_num == list->dim_row) {
+                return;
+            } else if (col_num == list->dim_col && row_num != list->dim_row) {
+                temp = temp->down;
+                while (temp->left != NULL) temp = temp->left;
+            } else {
+                temp = temp->right;
+            }
+        }
+        printf("\n");
+    }
+}
+
+
 int main() {
-    doubll2d_elem *test_return;
-    doubll2d list;
-    int **data = (int **) malloc(sizeof(int *));
-    size_t *size = (size_t *) malloc(sizeof(size_t));
-    size_t length = 1;
+    int** test_data = (int **)malloc(10 * sizeof(int *));
+    int i;
 
-    int **data2 = (int **) malloc(5 * sizeof(int *));
-    size_t *size2 = (size_t *) malloc(sizeof(size_t));
-    size_t length2 = 4;
-    *size2 = sizeof(int);
-    data2[0] = (int *) malloc(sizeof(int));
-    data2[0][0] = 1000;
-    data2[1] = (int *) malloc(sizeof(int));
-    data2[1][0] = 2000;
-    data2[2] = (int *) malloc(sizeof(int));
-    data2[2][0] = 3000;
-    data2[3] = (int *) malloc(sizeof(int));
-    data2[3][0] = 4000;
-
+    doubll2d test_list;
+    size_t* size = (size_t *)malloc(sizeof(size_t));
     *size = sizeof(int);
-    data[0] = (int *) malloc(sizeof(int));
-    data[0][0] = 100;
 
-    doubll2d_init(&list);
-    doubll2d_insert_row(&list, list.head, (void **) data, size, length);
+    srand((unsigned)time(NULL));
+    for (i = 0; i < 10; i++) {
+        test_data[i] = (int *)malloc(sizeof(int));
+        test_data[i][0] = rand()%1000;
+        printf("%d ",test_data[i][0]);
+    }
+    printf("\n\n");
 
+    doubll2d_init(&test_list);
 
-    data[0][0] = 200;
-    doubll2d_insert_row(&list, list.head, (void **) data, size, length);
+    doubll2d_insert_row(&test_list, test_list.head, (void **)test_data, size, 10);
+    doubll2d_insert_row(&test_list, test_list.head, (void **)test_data, size, 10);
+    doubll2d_insert_col(&test_list, test_list.head, (void **)test_data, size, 10);
+    doubll2d_insert_col(&test_list, test_list.head, (void **)test_data, size, 10);
+    travel(&test_list);
+    printf("\n\n");
 
+    doubll2d_insert_row(&test_list, test_list.head, (void **)test_data, size, 10);
+    travel(&test_list);
+    printf("\n\n");
 
-    data[0][0] = 300;
-    doubll2d_insert_row(&list, list.head->down, (void **) data, size, length);
+    doubll2d_insert_row(&test_list, test_list.head->right->right, (void **)test_data, size, 10);
+    travel(&test_list);
+    printf("\n\n");
 
+    doubll2d_insert_row(&test_list, test_list.head->down->down->down, (void **)test_data, size, 10);
+    travel(&test_list);
+    printf("\n\n");
 
-    data[0][0] = 400;
-    doubll2d_insert_row(&list, list.head->down->down, (void **) data, size, length);
-
-
-    printf("%d-%d-%d-%d\n", *((int *) list.head->data), *((int *) list.head->down->data),
-           *((int *) list.head->down->down->data), *((int *) list.head->down->down->down->data));
-
-    doubll2d_insert_col(&list, list.head->down->down->up, (void **) data2, size2, length2);
-
-    printf("%d-%d-%d-%d\n", *((int *) list.head->right->data), *((int *) list.head->down->right->data),
-           *((int *) list.head->down->down->right->data), *((int *) list.tail->data));
-
-    doubll2d_delete_row(&list, list.tail);
-
-    test_return = doubll2d_delete_col(&list, list.head->right);
-
-    printf("%d-%d-%d\n", *((int *) list.head->data), *((int *) list.head->down->data),
-           *((int *) list.head->down->down->data));
-
-    test_return = doubll2d_find_min(&list, less);
-    printf("min: %d\n", *((int *) test_return->data));
-
-    doubll2d_purge(&list);
-    free(data[0]);
-    free(data);
-    free(size);
-    free(data2[0]);
-    free(data2[1]);
-    free(data2[2]);
-    free(data2[3]);
-    free(data2);
-    free(size2);
-
+    doubll2d_purge(&test_list);
+    travel(&test_list);
+    printf("\n\n");
 
 
 
