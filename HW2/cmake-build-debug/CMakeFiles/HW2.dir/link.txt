@@ -1,0 +1,1 @@
+gcc -Wpedantic -Wall -Wextra -Werror -g   CMakeFiles/HW2.dir/main.c.o CMakeFiles/HW2.dir/doubll2d.c.o  -o HW2 
