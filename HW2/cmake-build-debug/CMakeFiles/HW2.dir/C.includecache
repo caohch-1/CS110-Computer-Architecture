@@ -6,19 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.h
-stdbool.h
--
-stddef.h
--
-
-/mnt/d/Project/CLionProjects/CS110/HW2/main.c
-stdio.h
--
+/mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.c
 doubll2d.h
 /mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.h
 stdlib.h
 -
-time.h
+string.h
+-
+
+/mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.h
+stdbool.h
+-
+stddef.h
 -
 

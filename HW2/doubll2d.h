@@ -14,8 +14,6 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-#define CHECK_LIST 100
-
 /* A list element (doubll2d_elem) has pointers to the four elements around it
    (i.e. left, right, up and down). The pointer should point to NULL if the
    neighbor it points to doesn't exist.
@@ -25,7 +23,8 @@
 
 typedef struct doubll2d_elem doubll2d_elem;
 
-struct doubll2d_elem {
+struct doubll2d_elem
+{
     doubll2d_elem *left;
     doubll2d_elem *right;
     doubll2d_elem *up;
@@ -73,7 +72,8 @@ typedef struct doubll2d doubll2d;
     The dim_row and dim_col stores the dimension of the rows and columns (i.e.
     the number of rows and columns).
 */
-struct doubll2d {
+struct doubll2d
+{
     doubll2d_elem *head;
     doubll2d_elem *tail;
 
@@ -163,9 +163,9 @@ doubll2d_elem *doubll2d_delete_col(doubll2d *list, doubll2d_elem *cursor);
 /*  Purge all items from the list. */
 void doubll2d_purge(doubll2d *list);
 
-/* Compare function.
+/* Compare function between two list elements. Return true if `a` is less than `b`.
    You could implement your own compare function in your test file. */
-typedef bool list_less_func(const void *a, const void *b);
+typedef bool list_less_func(const doubll2d_elem *a, const doubll2d_elem *b);
 
 /* Use the given `less` function to find the maximum element in the whole list.
    If there are multiple maximum elements, return any one of them.

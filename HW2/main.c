@@ -36,6 +36,7 @@ void travel(doubll2d *list) {
 int main() {
     int** test_data = (int **)malloc(10 * sizeof(int *));
     int i;
+    int input = 1;
 
     doubll2d test_list;
     size_t* size = (size_t *)malloc(sizeof(size_t));
@@ -51,30 +52,22 @@ int main() {
 
     doubll2d_init(&test_list);
 
-    doubll2d_insert_row(&test_list, test_list.head, (void **)test_data, size, 10);
-    doubll2d_insert_row(&test_list, test_list.head, (void **)test_data, size, 10);
-    doubll2d_insert_col(&test_list, test_list.head, (void **)test_data, size, 10);
-    doubll2d_insert_col(&test_list, test_list.head, (void **)test_data, size, 10);
-    travel(&test_list);
-    printf("\n\n");
+    while (input != 0) {
+        scanf("%d", &input);
+        if (input == 1) doubll2d_insert_row(&test_list, test_list.head, (void **)test_data, size, 10);
+        else if (input == 2) doubll2d_insert_row(&test_list, test_list.tail, (void **)test_data, size, 10);
+        else if (input == 3) doubll2d_insert_col(&test_list, test_list.head, (void **)test_data, size, 10);
+        else if (input == 4) doubll2d_insert_col(&test_list, test_list.tail, (void **)test_data, size, 10);
+        else if (input == 5) doubll2d_delete_row(&test_list, test_list.head);
+        else if (input == 6) doubll2d_delete_row(&test_list, test_list.tail);
+        else if (input == 7) doubll2d_delete_col(&test_list, test_list.head);
+        else if (input == 8) doubll2d_delete_col(&test_list, test_list.tail);
+        else if (input == 9) doubll2d_purge(&test_list);
 
-    doubll2d_insert_row(&test_list, test_list.head, (void **)test_data, size, 10);
-    travel(&test_list);
-    printf("\n\n");
-
-    doubll2d_insert_row(&test_list, test_list.head->right->right, (void **)test_data, size, 10);
-    travel(&test_list);
-    printf("\n\n");
-
-    doubll2d_insert_row(&test_list, test_list.head->down->down->down, (void **)test_data, size, 10);
-    travel(&test_list);
-    printf("\n\n");
-
-    doubll2d_purge(&test_list);
-    travel(&test_list);
-    printf("\n\n");
-
-
+        travel(&test_list);
+        printf("\nsize: %lu, %lu\n", test_list.dim_row, test_list.dim_col);
+        printf("\nover!\n\n");
+    }
 
     return 0;
 }
