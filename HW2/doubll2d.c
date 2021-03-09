@@ -290,7 +290,7 @@ doubll2d_elem *doubll2d_delete_row(doubll2d *list, doubll2d_elem *cursor) {
 
             current_node->up->down = NULL;
         } else if (current_node->down == NULL && current_node->up == NULL) {
-            /*Special situation for only one row in 2d list*/
+            /*Special situation for only one row in 2d list */
             return_node = NULL, list->head = NULL, list->tail = NULL, list->dim_col = 0;
             free(current_node->data), free(current_node);
             break;
