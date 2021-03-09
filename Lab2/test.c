@@ -30,6 +30,7 @@ vector_t *bad_vector_new() {
 
     retval->data[0] = 0;
     printf("external retval:%p, v:%p\n", (void *)&retval, (void *)&v);
+    // printf("debug here: %d\n", *v.data);
 
     return retval;
 }
@@ -44,18 +45,20 @@ vector_t also_bad_vector_new() {
     if (v.data == NULL) {
         allocation_failed();
     }
-    v.data[0] = 0;
-    printf("internal: %p\n", (void *)&v.data);
+    v.data[0] = 10;
+    printf("internal: %p\n", (void *)&v);
     return v;
 }
 
 int main() {
-    vector_t *test = bad_vector_new();
-    printf("external :%p\n", (void *)test);
-    free(test->data);
-    /*
+    // vector_t *test = bad_vector_new();
+    // printf("external :%p\n", (void *)test);
+    // free(test->data);
+
     vector_t test = also_bad_vector_new();
-    printf("external: %p", (void *)&test.data);
-     */
+    printf("external: %p\n", (void *)&test);
+    printf("debug here: %d\n", *test.data);
+    free(test.data);
+
     return 0;
 }
