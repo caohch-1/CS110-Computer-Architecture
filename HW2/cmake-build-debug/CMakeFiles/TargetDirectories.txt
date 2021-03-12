@@ -1,3 +1,0 @@
-/mnt/d/Project/CLionProjects/CS110/HW2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Project/CLionProjects/CS110/HW2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/Project/CLionProjects/CS110/HW2/cmake-build-debug/CMakeFiles/HW2.dir
