@@ -13,10 +13,20 @@ stdlib.h
 -
 string.h
 -
+stdio.h
+-
 
 /mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.h
 stdbool.h
 -
 stddef.h
 -
+
+/mnt/d/Project/CLionProjects/CS110/HW2/main.c
+stdio.h
+-
+stdlib.h
+-
+doubll2d.h
+/mnt/d/Project/CLionProjects/CS110/HW2/doubll2d.h
 

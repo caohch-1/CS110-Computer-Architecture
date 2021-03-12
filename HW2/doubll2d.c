@@ -1,6 +1,7 @@
 #include "doubll2d.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /*Used to check if cursor is in list when CHECK_LIST is set*/
 static int find_cursor(doubll2d *list, doubll2d_elem *cursor, int if_use) {
@@ -266,6 +267,8 @@ doubll2d_elem *doubll2d_delete_row(doubll2d *list, doubll2d_elem *cursor) {
     doubll2d_elem *current_node = cursor;
     unsigned int i;
     doubll2d_elem *return_node;
+    /*flag for line 302*/
+    int flag_one_row = 0;
     if (list == NULL || cursor == NULL) return NULL;
 
 
@@ -297,9 +300,7 @@ doubll2d_elem *doubll2d_delete_row(doubll2d *list, doubll2d_elem *cursor) {
             current_node->up->down = NULL;
         } else if (current_node->down == NULL && current_node->up == NULL) {
             /*Special situation for only one row in 2d list */
-            return_node = NULL, list->head = NULL, list->tail = NULL, list->dim_col = 0;
-            free(current_node->data), free(current_node);
-            break;
+            flag_one_row = 1; list->head = NULL; list->tail = NULL; return_node = NULL;
         } else {
             /*Set return value*/
             if (current_node == cursor) return_node = current_node->up;
@@ -307,6 +308,7 @@ doubll2d_elem *doubll2d_delete_row(doubll2d *list, doubll2d_elem *cursor) {
             current_node->up->down = current_node->down;
             current_node->down->up = current_node->up;
         }
+
         /*Special situation for free last node in this row*/
         if (i == list->dim_col - 1) {
             free(current_node->data), free(current_node);
@@ -314,9 +316,9 @@ doubll2d_elem *doubll2d_delete_row(doubll2d *list, doubll2d_elem *cursor) {
         }
         /*Move current_node to next(right)*/
         current_node = current_node->right;
-
         free(current_node->left->data), free(current_node->left);
     }
+    if (flag_one_row == 1) list->dim_col = 0;
     /*Set dim_row*/
     list->dim_row--;
     return return_node;
@@ -327,6 +329,8 @@ doubll2d_elem *doubll2d_delete_col(doubll2d *list, doubll2d_elem *cursor) {
     doubll2d_elem *current_node = cursor;
     unsigned int i;
     doubll2d_elem *return_node;
+    /*flag for line 302*/
+    int flag_one_col = 0;
     if (list == NULL || cursor == NULL) return NULL;
 
     /*Check whether list is empty, if true than just skip check*/
@@ -356,10 +360,8 @@ doubll2d_elem *doubll2d_delete_col(doubll2d *list, doubll2d_elem *cursor) {
 
             current_node->left->right = NULL;
         } else if (current_node->right == NULL && current_node->left == NULL) {
-            /*Special situation for only one col in 2d list*/
-            return_node = NULL, list->head = NULL, list->tail = NULL, list->dim_row = 0;
-            free(current_node->data), free(current_node);
-            break;
+            /*Special situation for only one row in 2d list */
+            flag_one_col = 1; list->head = NULL; list->tail = NULL; return_node = NULL;
         } else {
             /*Set return value*/
             if (current_node == cursor) return_node = current_node->left;
@@ -374,9 +376,10 @@ doubll2d_elem *doubll2d_delete_col(doubll2d *list, doubll2d_elem *cursor) {
         }
         /*Move current_node to next(down)*/
         current_node = current_node->down;
-
         free(current_node->up->data), free(current_node->up);
     }
+
+    if (flag_one_col == 1) list->dim_row = 0;
     /*Set dim_col*/
     list->dim_col--;
     return return_node;

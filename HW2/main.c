@@ -1,134 +1,204 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define CHECK_LIST
+
 #include "doubll2d.h"
 
-/* #define NDEBUG */
-#include <assert.h>
-#ifndef prt
-#define prt(x) printf("%d ", x)
-#endif
-#define hh head
-#define tt tail
-typedef doubll2d list2d;
-typedef doubll2d_elem elem;
-elem *new_elem(int* val) {
-    elem *res = (elem*)malloc(sizeof(elem));
-    res->up = res->right = res->down = res->left = NULL;
-    res->data = (int*)val;
-    res->size = 4;
-    return res;
-}
-int value(elem* e) {
-    if (e == NULL) return -1;
-    return *(int*)e->data;
-}
-void prt_elem(elem* e) {
-    prt(value(e));
-}
-bool same(elem* e, int val) {
-    return value(e) == val;
-}
-bool cmp(const doubll2d_elem* a, const doubll2d_elem* b) {
-    return *(int*)a->data < *(int*)b->data;
-}
+#define DATA_SIZE 10
 
-int main() {
-    list2d* l = (list2d*)malloc(sizeof(list2d));
-    int* v[25];
-    size_t s[5] = {4,4,4,4,4};
-    elem *p;
-    elem *e[100];
-    /*elem *ee;*/
-    int i, n;
-    for (i = 0; i < 25; i++) {
-        v[i] = (int*)malloc(sizeof(int));
-        v[i][0] = i + 1;
-        e[i] = new_elem(v[i]);
+void data_shift(int** data, int shift);
+bool less(const doubll2d_elem* a, const doubll2d_elem* b);
+bool rand_less(const doubll2d_elem* a, const doubll2d_elem* b);
+void check_null_list(doubll2d *list);
+
+int main()
+{
+    size_t i = 0, j = 0;
+    int **data = (int **)malloc(sizeof(int *) * DATA_SIZE);
+    size_t *size = (size_t *)malloc(sizeof(size_t) * DATA_SIZE);
+    doubll2d *list = NULL;
+    doubll2d_elem *max, *min;
+    doubll2d_elem *current, *current_row, *return_cursor;
+    srand(1);
+
+    /* data and size */
+    for (i = 0; i < DATA_SIZE; i++)
+    {
+        data[i] = (int *)malloc(sizeof(int));
+        *(data[i]) = i + j;
+        size[i] = sizeof(*(data[i]));
     }
-    assert(value(e[3]) == 4);
-    assert((cmp(e[2], e[1]) == 0 ? 0 : 1) == 0);
-    assert((cmp(e[1], e[3]) == 0 ? 0 : 1) == 1);
-    doubll2d_init(l);
 
-    /* test insert */
-    doubll2d_insert_row(l, l->head, (void**)(v+19), s, 1); /*  20 */
-    assert(same(l->hh, 20));
-    doubll2d_insert_row(l, l->hh, (void**)(v+16), s, 1); /*  17  */
-    assert(same(l->hh->down, 17));
-    doubll2d_insert_col(l, l->hh, (void**)(v+6), s, 3); /*  7 8 */
-    assert(same(l->hh->right, 7));
-    assert(same(l->hh->right->down, 8));
-    p =  doubll2d_insert_row(l, l->hh->down->right, (void**)(v+3), s, 1);
-    /*  size not enough, return NULL */
-    assert(p == NULL);
-    p = doubll2d_insert_col(l, NULL, (void**)(v+1), s, 1);
-    assert(p == NULL);
+    printf("Test if list == NULL.\n");
+    check_null_list(list);
+    putchar('\n');
 
-    p = doubll2d_get_head(l);
-    assert(same(p, 20));
-    p = doubll2d_get_tail(l);
-    assert(same(p, 8));
+    list = (doubll2d *)malloc(sizeof(doubll2d));
+    doubll2d_init(list);
+    printf("Test if list is alloced ahead and initialized.\n");
+    check_null_list(list);
 
-    p = doubll2d_insert_row(l, l->hh, (void**)(v+10), s, 2); /*  11 12 */
-    assert(same(l->hh->down, 11));
-    assert(same(p, 11));
+    putchar('\n');
 
-    n = doubll2d_dim_row(l);
-    assert(n == 3);
-    p = doubll2d_insert_col(l, l->hh->down->right, (void**)(v+21), s, 3); /*  22 23 24 */
-    assert(same(l->hh->right->right, 22));
-    assert(same(p, 23));
-    n = doubll2d_dim_col(l);
-    assert(n == 3);
-/*
-    ee = doubll2d_new_element(*(v+11), 4);
-    assert(*(int*)ee->data == 12);
-#ifdef CHECK_LIST
-    p = doubll2d_insert_col(l, ee, (void**)(v+11), s, 5);
-    assert(p == NULL);
-#endif
- */
+    printf("Test insert, delete.\n");
+    return_cursor = doubll2d_delete_row(list, list->tail);
+    printf("doubll2d_dim_row(list) = %lu[0], doubll2d_dim_col(list) = %lu[0].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    printf("return_cursor = %p[%p].\n", (void*)return_cursor, NULL);
+    return_cursor = doubll2d_delete_col(list, list->head);
+    printf("doubll2d_dim_row(list) = %lu[0], doubll2d_dim_col(list) = %lu[0].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    printf("return_cursor = %p[%p].\n", (void*)return_cursor, NULL);
+    doubll2d_insert_row(list, NULL, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[1], doubll2d_dim_col(list) = %lu[1].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_row(list, list->head, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[2], doubll2d_dim_col(list) = %lu[1].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_row(list, list->head, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[3], doubll2d_dim_col(list) = %lu[1].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_row(list, list->head->down, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[4], doubll2d_dim_col(list) = %lu[1].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_row(list, list->tail->up, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[1].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_col(list, list->head, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[2].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_col(list, list->head, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[3].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_col(list, list->head->right, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[4].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, -10);
+    doubll2d_insert_col(list, list->tail->left, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[5].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, -10);
+    doubll2d_insert_col(list, list->head, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[6].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, -10);
+    doubll2d_insert_row(list, list->head, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[6].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, -10);
+    doubll2d_insert_row(list, list->head, NULL, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[6].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, -10);
+    return_cursor = doubll2d_delete_row(list, list->head);
+    printf("doubll2d_dim_row(list) = %lu[4], doubll2d_dim_col(list) = %lu[6].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    printf("return_cursor = %p[%p].\n", (void*)return_cursor, (void*)list->head);
+    data_shift(data, -10);
+    return_cursor = doubll2d_delete_row(list, NULL);
+    printf("doubll2d_dim_row(list) = %lu[4], doubll2d_dim_col(list) = %lu[6].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    printf("return_cursor = %p[%p].\n", (void*)return_cursor, NULL);
+    data_shift(data, -10);
+    return_cursor = doubll2d_delete_row(list, list->tail);
+    printf("doubll2d_dim_row(list) = %lu[3], doubll2d_dim_col(list) = %lu[6].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    printf("return_cursor = %p[%p].\n", (void*)return_cursor, (void*)list->tail);
+    data_shift(data, -10);
+    return_cursor = doubll2d_delete_col(list, list->head);
+    printf("doubll2d_dim_row(list) = %lu[3], doubll2d_dim_col(list) = %lu[5].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    printf("return_cursor = %p[%p].\n", (void*)return_cursor, (void*)list->head);
+    data_shift(data, -10);
+    return_cursor = doubll2d_delete_col(list, list->tail);
+    printf("doubll2d_dim_row(list) = %lu[3], doubll2d_dim_col(list) = %lu[4].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    printf("return_cursor = %p[%p].\n", (void*)return_cursor, (void*)list->tail);
+    data_shift(data, 10);
+    doubll2d_insert_row(list, list->tail->up, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[4], doubll2d_dim_col(list) = %lu[4].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_col(list, list->head, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[4], doubll2d_dim_col(list) = %lu[5].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_row(list, list->tail->up, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[5].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
+    doubll2d_insert_col(list, list->head, (void**)data, size, 5);
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[6].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    data_shift(data, 10);
 
-    /* test delete */
-    p = doubll2d_delete_col(l, l->hh->right);
-    assert(same(p, 20));
-    assert(same(l->hh->right, 22));
-    n = doubll2d_dim_col(l);
-    assert(n == 2);
-    p = doubll2d_delete_row(l, l->hh);
-    assert(same(p, 11));
-    assert(same(l->hh, 11));
-    assert(same(l->hh->right, 23));
-    assert(same(l->tt, 24));
-#ifdef CHECK_LIST
-    p = doubll2d_delete_row(l, NULL);
-    assert(p == NULL);
-#endif
-    p = doubll2d_delete_col(NULL, l->head);
-    assert(p == NULL);
+    max = doubll2d_find_max(list, less);
+    min = doubll2d_find_min(list, less);
+    printf("max = %d[73], min = %d[-10].\n", (*(int*)max->data), (*(int*)min->data));
+    max = doubll2d_find_max(list, rand_less);
+    min = doubll2d_find_min(list, rand_less);
+    printf("In linux gcc: max = %d[73], min = %d[63].\n", (*(int*)max->data), (*(int*)min->data));
 
-    /* test max & min & purge */
-    p = doubll2d_find_max(l, cmp);
-    assert(same(p, 24));
-    p = doubll2d_find_min(l, cmp);
-    assert(same(p, 11));
-    doubll2d_purge(l);
-    assert(l->head == NULL);
-    assert(l->tail == NULL);
-    assert(l->dim_col == 0);
-    p = doubll2d_find_min(l, cmp);
-    assert(p == NULL);
+    current_row = list->head;
+    /* row scanning */
+    while (current = current_row, current_row != NULL) {
+        for (i = 0; i < doubll2d_dim_col(list); i++, current = current->right)
+            printf("data = %d\t", *(int*)(current->data));
 
-#ifndef NDEBUG
-    printf("Pass all tests!\n");
-#else
-    printf("Finish all cases!\n");
-#endif
-    free(l);
-    for (i = 0; i < 25; i++) {
-        free(v[i]);
-        free(e[i]);
+        putchar('\n');
+        current_row = current_row->down;
     }
+
+
+    printf("doubll2d_dim_row(list) = %lu[5], doubll2d_dim_col(list) = %lu[6].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    doubll2d_purge(list);
+    printf("doubll2d_dim_row(list) = %lu[0], doubll2d_dim_col(list) = %lu[0].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    for (i = 0; i < DATA_SIZE; i++)
+        free(data[i]);
+    free(data);
+    free(size);
+    free(list);
     return 0;
 }
+
+void data_shift(int** data, int shift)
+{
+    int i = 0;
+    for (i = 0; i < DATA_SIZE; i++)
+    {
+        *(data[i]) += shift;
+    }
+}
+
+bool less(const doubll2d_elem* a, const doubll2d_elem* b)
+{
+    return *((int*)(a->data)) < *((int*)(b->data));
+}
+
+bool rand_less(const doubll2d_elem* a, const doubll2d_elem* b)
+{
+    int r = rand();
+    int x = (*((int*)(a->data)) * r) % RAND_MAX;
+    int y = (*((int*)(b->data)) * r * r) % RAND_MAX;
+    return x < y;
+}
+
+
+void check_null_list(doubll2d *list)
+{
+    if (doubll2d_get_head(list) == NULL)
+        printf("doubll2d_get_head(list) gets NULL[yes].\n");
+    else
+        printf("doubll2d_get_head(list) gets head[no].\n");
+    if (doubll2d_get_tail(list) == NULL)
+        printf("doubll2d_get_tail(list) gets NULL[yes].\n");
+    else
+        printf("doubll2d_get_tail(list) gets tail[no].\n");
+    if (list == NULL)
+        printf("doubll2d_dim_row(list) = %lu[-1], doubll2d_dim_col(list) = %lu[-1].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+    else
+        printf("doubll2d_dim_row(list) = %lu[0], doubll2d_dim_col(list) = %lu[0].\n", doubll2d_dim_row(list), doubll2d_dim_col(list));
+}
+/*if (doubll2d_insert_row(list, NULL, data, size, DATA_SIZE) == NULL) {
+    printf("doubll2d_insert_row(list, NULL, data, size, DATA_SIZE) gets NULL[yes].\n");
+} else {
+    printf("doubll2d_insert_row(list, NULL, data, size, DATA_SIZE) gets something[no].\n");
+}
+if (doubll2d_insert_col(list, NULL, data, size, DATA_SIZE) == NULL) {
+    printf("doubll2d_insert_col(list, NULL, data, size, DATA_SIZE) gets NULL[yes].\n");
+} else {
+    printf("doubll2d_insert_col(list, NULL, data, size, DATA_SIZE) gets something[no].\n");
+}
+if (doubll2d_delete_row(list, NULL) == NULL) {
+    printf("doubll2d_delete_row(list, NULL) gets NULL[yes].\n");
+} else {
+    printf("doubll2d_delete_row(list, NULL) gets something[no].\n");
+}
+if (doubll2d_delete_col(list, NULL) == NULL) {
+    printf("doubll2d_delete_col(list, NULL) gets NULL[yes].\n");
+} else {
+    printf("doubll2d_delete_col(list, NULL) gets something[no].\n");
+}*/
