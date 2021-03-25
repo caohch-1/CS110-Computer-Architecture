@@ -28,4 +28,4 @@ heap:
 # You should modify this variable accordingly when inserting or popping elements.
 .globl	len
 len:
-	.word	4
+	.word	0
