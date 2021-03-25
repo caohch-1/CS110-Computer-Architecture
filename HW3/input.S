@@ -22,10 +22,10 @@ input_len:
 # Any operation that causes the array to hold more than 32 elements is an overflow.
 .globl	heap
 heap:
-	.word	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	.word	1 2 3 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 # Global variable that holds the current length of the heap
 # You should modify this variable accordingly when inserting or popping elements.
 .globl	len
 len:
-	.word	0
+	.word	4
