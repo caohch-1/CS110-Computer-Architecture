@@ -9,20 +9,20 @@
 # DO NOT MODIFY THIS VARIABLE
 .globl	input
 input:
-	.word	0 1 2 3 -1 -2
+	.word	5 4 3 2 1 -1 -2
 
 # Constant integer specifying the number of operations
 # DO NOT MODIFY THIS VARIABLE
 .globl  input_len
 input_len:
-        .word   6
+        .word  7
 
 # Statically allocated array for the heap data structure
 # You may assume that the maximum capacity is 32.
 # Any operation that causes the array to hold more than 32 elements is an overflow.
 .globl	heap
 heap:
-	.word	1 2 3 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	.word	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 # Global variable that holds the current length of the heap
 # You should modify this variable accordingly when inserting or popping elements.

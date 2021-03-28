@@ -53,7 +53,7 @@ int main()
     {
         if (input[i] == -1)
         {
-            HEAP_EXTRACT_MIN(heap);
+            printf("%d\n", HEAP_EXTRACT_MIN(heap));
             continue;
         }
         else if (input[i] == -2)
