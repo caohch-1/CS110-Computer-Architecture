@@ -1,5 +1,5 @@
 # DO NOT REMOVE THIS LINE WHEN SUBMITTING
-.import test.S
+.import input.S
 
 .text
 .globl	main
@@ -16,6 +16,9 @@ main:
 	li t4, 0 # int t4 = 0
 
 	main_loop:
+
+	beq s2, zero, normal_exit
+
 	slli t5, t4, 2 # for(t4 = 0; t4 < input_len; t4++)
 	add t6, t5, s5 # t6 addr of input[t4]
 	lw a1, 0(t6) # int a1 = input[t4]
@@ -212,7 +215,7 @@ heap_extract_min:
 	lw a0, 8(sp) # Restore from stack
 	lw t2, 4(sp) # Restore from stack
 	lw t1, 0(sp) # Restore from stack
-	addi sp, sp, 16 # Restore from stack
+	addi sp, sp, 20 # Restore from stack
 
 	ret
 

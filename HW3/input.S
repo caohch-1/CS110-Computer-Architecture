@@ -15,7 +15,7 @@ input:
 # DO NOT MODIFY THIS VARIABLE
 .globl  input_len
 input_len:
-        .word  7
+        .word  0
 
 # Statically allocated array for the heap data structure
 # You may assume that the maximum capacity is 32.

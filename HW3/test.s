@@ -1,10 +1,10 @@
 .data
 .globl	input
 input:
-	.word	34 16 -2 -2 63 8 53 -1 -1 67 -1 28 82 
+	.word	-1 6 56 -1 37 -1 -1 92 91 47 14 -1 -2 69 82 -1 
 .globl  input_len
 input_len:
-        .word  13
+        .word  16
 .globl	heap
 heap:
 	.word	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 

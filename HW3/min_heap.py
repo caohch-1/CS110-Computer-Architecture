@@ -1,15 +1,19 @@
 # created by caohch1 3/28/2021
 # Please change your 2rd code in heap.S to ".import test.S"
+# If you see "Fuck CA!" then you passed, or you will get python's heapq's ans and yours
 import heapq
 from random import randint
 from sys import exit
 import subprocess
 
+# valve used to control num of -1 and -2 in input, should from 0..100
+valve = 30
+
 # Init data
 input = list()
 input_len = randint(1, 50)
 for i in range(input_len):
-    if randint(0, 100) >= 30:
+    if randint(0, 100) >= valve:
         ele = randint(-2, 100)
         while (ele in input and ele != -1 and ele != -2):
             ele = randint(-2, 100)
