@@ -1,0 +1,5 @@
+/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/CMakeFiles/rebuild_cache.dir
+/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/CMakeFiles/Production.dir
+/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/CMakeFiles/edit_cache.dir
+/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/CMakeFiles/Debug.dir
+/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/CMakeFiles/Z_DUMMY_TARGET.dir

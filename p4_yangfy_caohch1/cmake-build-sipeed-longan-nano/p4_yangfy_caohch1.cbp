@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="p4_yangfy_caohch1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Production">
+				<Option working_dir="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 Production"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Debug">
+				<Option working_dir="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 Debug"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/include"/>
+					<Add directory="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral/Include"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver/Include"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/RISCV/drivers"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/RISCV/env_Eclipse"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/RISCV/stubs"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include/c++/9.2.0"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include/c++/9.2.0/riscv-nuclei-elf"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/lib/gcc/riscv-nuclei-elf/9.2.0/include-fixed"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/lib/gcc/riscv-nuclei-elf/9.2.0/include"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/include"/>
+					<Add directory="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral/Include"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver/Include"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/RISCV/drivers"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/RISCV/env_Eclipse"/>
+					<Add directory="/home/caohch1/.platformio/packages/framework-gd32vf103-sdk/RISCV/stubs"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include/c++/9.2.0"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include/c++/9.2.0/riscv-nuclei-elf"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/lib/gcc/riscv-nuclei-elf/9.2.0/include-fixed"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/lib/gcc/riscv-nuclei-elf/9.2.0/include"/>
+					<Add directory="/home/caohch1/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/assembly/example.S">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/fatfs/00history.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/fatfs/00readme.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/fatfs/ff.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/fatfs/ffsystem.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/fatfs/ffunicode.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/fatfs/tf_card.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/lcd/lcd.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/main.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/systick.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/src/utils.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/caohch1/Desktop/CS110/p4_yangfy_caohch1/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

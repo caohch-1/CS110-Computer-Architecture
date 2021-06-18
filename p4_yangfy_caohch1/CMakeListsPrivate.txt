@@ -1,0 +1,53 @@
+# !!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE
+# https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+#
+# If you need to override existing CMake configuration or add extra,
+# please create `CMakeListsUser.txt` in the root of project.
+# The `CMakeListsUser.txt` will not be overwritten by PlatformIO.
+
+
+
+set(CMAKE_CONFIGURATION_TYPES "sipeed-longan-nano" CACHE STRING "Build Types reflect PlatformIO Environments" FORCE)
+
+set(CLION_SVD_FILE_PATH "$ENV{HOME}/.platformio/platforms/gd32v/misc/svd/GD32VF103.svd" CACHE FILEPATH "Peripheral Registers Definitions File" FORCE)
+
+SET(CMAKE_C_COMPILER "$ENV{HOME}/.platformio/packages/toolchain-gd32v/bin/riscv-nuclei-elf-gcc")
+SET(CMAKE_CXX_COMPILER "$ENV{HOME}/.platformio/packages/toolchain-gd32v/bin/riscv-nuclei-elf-g++")
+SET(CMAKE_CXX_FLAGS "-std=gnu++17 -Os -Wall -march=rv32imac -mabi=ilp32 -mcmodel=medlow -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common")
+SET(CMAKE_C_FLAGS "-std=gnu11 -Os -Wall -march=rv32imac -mabi=ilp32 -mcmodel=medlow -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common")
+
+SET(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+
+if (CMAKE_BUILD_TYPE MATCHES "sipeed-longan-nano")
+    add_definitions(-D'PLATFORMIO=50100')
+    add_definitions(-D'USE_STDPERIPH_DRIVER')
+    add_definitions(-D'HXTAL_VALUE=8000000U')
+
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/include")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/src")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral/Include")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver/Include")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-gd32vf103-sdk/RISCV/drivers")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-gd32vf103-sdk/RISCV/env_Eclipse")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-gd32vf103-sdk/RISCV/stubs")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include/c++/9.2.0")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include/c++/9.2.0/riscv-nuclei-elf")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gd32v/lib/gcc/riscv-nuclei-elf/9.2.0/include-fixed")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gd32v/lib/gcc/riscv-nuclei-elf/9.2.0/include")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gd32v/riscv-nuclei-elf/include")
+
+    FILE(GLOB_RECURSE EXTRA_LIB_SOURCES
+        ${CMAKE_CURRENT_LIST_DIR}/.pio/libdeps/sipeed-longan-nano/*.*
+    )
+endif()
+
+
+FILE(GLOB_RECURSE SRC_LIST
+    ${CMAKE_CURRENT_LIST_DIR}/src/*.*
+    ${CMAKE_CURRENT_LIST_DIR}/lib/*.*
+)
+
+list(APPEND SRC_LIST ${EXTRA_LIB_SOURCES})

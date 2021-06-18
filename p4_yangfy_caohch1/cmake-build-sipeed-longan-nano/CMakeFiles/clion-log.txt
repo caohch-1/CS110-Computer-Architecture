@@ -1,0 +1,4 @@
+/home/caohch1/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/211.7442.42/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=sipeed-longan-nano -G "CodeBlocks - Unix Makefiles" /home/caohch1/Desktop/CS110/p4_yangfy_caohch1
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/caohch1/Desktop/CS110/p4_yangfy_caohch1/cmake-build-sipeed-longan-nano

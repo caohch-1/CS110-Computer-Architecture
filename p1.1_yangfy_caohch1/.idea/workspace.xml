@@ -1,0 +1,381 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7e0b0160-483d-4ec1-a20a-6b128d077135" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/p1.1_yangfy_caohch1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1.1_yangfy_caohch1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assembler" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/labels.int" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/labels.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/labels.memcheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/labels.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/labels.result" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/labels.symtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p1_errors.int" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p1_errors.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p1_errors.memcheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p1_errors.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p1_errors.result" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p1_errors.symtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p2_errors.int" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p2_errors.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p2_errors.memcheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p2_errors.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p2_errors.result" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/p2_errors.symtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/simple1.int" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/simple1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/simple1.memcheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/simple1.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/simple1.result" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/full/simple1.symtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/simple.int" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/simple.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/simple.memcheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/simple.result" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/simple.symtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/unknown_instr.int" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/unknown_instr.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/unknown_instr.memcheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/unknown_instr.result" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p1/unknown_instr.symtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p2/labels.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p2/labels.memcheck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p2/labels.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/out/p2/labels.result" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MakefileLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="p1.1_yangfy_caohch1" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="p1.1_yangfy_caohch1" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pvfkqPATFxsFuKcRmjQStsxNhi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Makefile" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e0b0160-483d-4ec1-a20a-6b128d077135" name="Default Changelist" comment="" />
+      <created>1616068638587</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616068638587</updated>
+      <workItem from="1616068643885" duration="39000" />
+      <workItem from="1616068705665" duration="6958000" />
+      <workItem from="1616224586765" duration="209000" />
+      <workItem from="1616224919594" duration="7736000" />
+      <workItem from="1616236866213" duration="253000" />
+      <workItem from="1616242974057" duration="18239000" />
+      <workItem from="1616266642174" duration="21000" />
+      <workItem from="1616275478451" duration="3300000" />
+      <workItem from="1616309099628" duration="12981000" />
+      <workItem from="1616339015556" duration="5049000" />
+      <workItem from="1616344314393" duration="2404000" />
+      <workItem from="1616422587208" duration="183000" />
+      <workItem from="1616422772539" duration="3507000" />
+      <workItem from="1616432304376" duration="58000" />
+      <workItem from="1616472629542" duration="8252000" />
+      <workItem from="1616499116597" duration="16314000" />
+      <workItem from="1616563383635" duration="950000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="p1.1_yangfy_caohch1" targetName="all" />
+      <config projectName="p1.1_yangfy_caohch1" targetName="assembler" />
+      <config projectName="p1.1_yangfy_caohch1" targetName="grade" />
+      <config projectName="p1.1_yangfy_caohch1" targetName="check" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7e0b0160-483d-4ec1-a20a-6b128d077135" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/p1.1_yangfy_caohch1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1.1_yangfy_caohch1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MakefileLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="p1.1_yangfy_caohch1" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="p1.1_yangfy_caohch1" />
+                <option name="path" value="D:\Project\CLionProjects\p1.1_yangfy_caohch1" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pvfkqPATFxsFuKcRmjQStsxNhi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Makefile" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager" selected="Makefile Application.assembler">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p1.1_yangfy_caohch1" TARGET_NAME="all" CONFIG_NAME="all" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="assembler" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p1.1_yangfy_caohch1" TARGET_NAME="assembler" CONFIG_NAME="assembler" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="check" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p1.1_yangfy_caohch1" TARGET_NAME="check" CONFIG_NAME="check" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="grade" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p1.1_yangfy_caohch1" TARGET_NAME="grade" CONFIG_NAME="grade" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Makefile Application.assembler" />
+      <item itemvalue="Makefile Application.check" />
+      <item itemvalue="Makefile Application.grade" />
+      <item itemvalue="Makefile Application.all" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e0b0160-483d-4ec1-a20a-6b128d077135" name="Default Changelist" comment="" />
+      <created>1616068638587</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616068638587</updated>
+      <workItem from="1616068643885" duration="39000" />
+      <workItem from="1616068705665" duration="6958000" />
+      <workItem from="1616224586765" duration="209000" />
+      <workItem from="1616224919594" duration="7736000" />
+      <workItem from="1616236866213" duration="253000" />
+      <workItem from="1616242974057" duration="18239000" />
+      <workItem from="1616266642174" duration="21000" />
+      <workItem from="1616275478451" duration="3300000" />
+      <workItem from="1616309099628" duration="12981000" />
+      <workItem from="1616339015556" duration="5049000" />
+      <workItem from="1616344314393" duration="2404000" />
+      <workItem from="1616422587208" duration="183000" />
+      <workItem from="1616422772539" duration="3507000" />
+      <workItem from="1616432304376" duration="58000" />
+      <workItem from="1616472629542" duration="8252000" />
+      <workItem from="1616499116597" duration="16600000" />
+      <workItem from="1616519145615" duration="1440000" />
+      <workItem from="1616562397958" duration="1977000" />
+      <workItem from="1616566617060" duration="225000" />
+      <workItem from="1616588537306" duration="7415000" />
+      <workItem from="1616747063748" duration="42000" />
+      <workItem from="1616747119363" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+>>>>>>> b06be2de031e2c962d041b5e1ec4ab11180bd2bd
+</project>

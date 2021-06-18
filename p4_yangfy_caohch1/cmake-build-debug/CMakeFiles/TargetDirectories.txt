@@ -1,0 +1,5 @@
+/Users/yangfuyi/Documents/ShanghaiTech/Term2_2/CS110_CA/Project/p4_yangfy_caohch1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yangfuyi/Documents/ShanghaiTech/Term2_2/CS110_CA/Project/p4_yangfy_caohch1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yangfuyi/Documents/ShanghaiTech/Term2_2/CS110_CA/Project/p4_yangfy_caohch1/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir
+/Users/yangfuyi/Documents/ShanghaiTech/Term2_2/CS110_CA/Project/p4_yangfy_caohch1/cmake-build-debug/CMakeFiles/Debug.dir
+/Users/yangfuyi/Documents/ShanghaiTech/Term2_2/CS110_CA/Project/p4_yangfy_caohch1/cmake-build-debug/CMakeFiles/Production.dir

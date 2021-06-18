@@ -1,0 +1,3 @@
+addi t0 x0 3
+slt a2 t1 t0
+sltu a2 t1 t0
